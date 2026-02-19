@@ -1,0 +1,26 @@
+body {
+  background-color: #00fff2;
+}
+/* Custom class untuk efek shadow dan hover khas Neo-Brutalisme */
+.brutalist-shadow {
+  box-shadow: 8px 8px 0px #000000;
+}
+.brutalist-hover:hover {
+  transform: translate(4px, 4px);
+  box-shadow: 4px 4px 0px #000000;
+}
+
+/* Animasi Marquee untuk section skills */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 15s linear infinite;
+}

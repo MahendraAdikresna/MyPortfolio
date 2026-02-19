@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neo-Brutalism Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Space Grotesk"', "sans-serif"],
+            },
+            colors: {
+              bgBrutal: "#fffdd0",
+              neonPink: "#ff90e8",
+              neonYellow: "#ffc900",
+              neonBlue: "#90f4ff",
+              neonGreen: "#b2ff90",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #f5f5dc;
+      }
+      /* Custom class untuk efek shadow dan hover khas Neo-Brutalisme */
+      .brutalist-shadow {
+        box-shadow: 8px 8px 0px #000000;
+      }
+      .brutalist-hover:hover {
+        transform: translate(4px, 4px);
+        box-shadow: 4px 4px 0px #000000;
+      }
+
+      /* Animasi Marquee untuk section skills */
+      @keyframes marquee {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      .animate-marquee {
+        display: flex;
+        width: 200%;
+        animation: marquee 15s linear infinite;
+      }
+    </style>
+  </head>
+  <body class="text-black font-sans antialiased overflow-x-hidden">
+    <nav class="border-b-4 border-black bg-white sticky top-0 z-50">
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a
+          href="#"
+          class="text-3xl font-bold tracking-tighter hover:text-neonPink transition-colors uppercase"
+        >
+          MAHENDRA
+        </a>
+
+        <div class="hidden md:flex items-center space-x-8 font-bold">
+          <a
+            href="#about"
+            class="hover:underline decoration-4 underline-offset-4"
+            >About</a
+          >
+          <a
+            href="#work"
+            class="hover:underline decoration-4 underline-offset-4"
+            >Work</a
+          >
+          <a
+            href="#contact"
+            class="hover:underline decoration-4 underline-offset-4"
+            >Contact</a
+          >
+        </div>
+
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden border-4 border-black p-2 bg-neonBlue brutalist-shadow brutalist-hover"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="square"
+              stroke-linejoin="miter"
+              stroke-width="3"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="hidden border-t-4 border-black bg-neonYellow flex-col items-center py-4 space-y-4 font-bold md:hidden"
+      >
+        <a href="#about" class="text-xl">About</a>
+        <a href="#work" class="text-xl">Work</a>
+        <a href="#contact" class="text-xl">Contact</a>
+      </div>
+    </nav>
+
+    <section
+      id="about"
+      class="max-w-7xl mx-auto px-6 py-20 md:py-32 grid md:grid-cols-2 gap-12 items-center"
+    >
+      <div>
+        <h1 class="text-5xl md:text-7xl font-bold uppercase leading-[1.1] mb-6">
+          Hi, I'm Mahendra Adikresna.<br />
+          <span
+            class="bg-neonPink px-2 border-4 border-black inline-block mt-2 brutalist-shadow"
+            >I build stuff.</span
+          >
+        </h1>
+        <p class="text-xl font-semibold mb-8 max-w-md">
+          I'm a Frontend Developer and who loves creating bold, functional, and
+          slightly chaotic websites.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a
+            href="#contact"
+            class="bg-neonGreen border-4 border-black px-8 py-4 font-bold text-lg uppercase brutalist-shadow brutalist-hover transition-all duration-200"
+          >
+            Hire Me
+          </a>
+          <a
+            href="#work"
+            class="bg-neonYellow border-4 border-black px-8 py-4 font-bold text-lg uppercase brutalist-shadow brutalist-hover transition-all duration-200"
+          >
+            View Work
+          </a>
+        </div>
+      </div>
+      <div
+        class="relative w-full aspect-square border-4 border-black bg-neonBlue brutalist-shadow overflow-hidden group"
+      >
+        <img
+          src="myAvatar.png"
+          alt="My Avatar"
+          class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+        />
+      </div>
+    </section>
+
+    <div
+      class="border-y-4 border-black bg-neonYellow overflow-hidden py-4 flex"
+    >
+      <div
+        class="animate-marquee whitespace-nowrap text-3xl font-bold uppercase tracking-widest flex space-x-8"
+      >
+        <span> HTML * CSS * JAVASCRIPT * TAILWINDCSS * </span>
+        <span> * HTML * CSS * JAVASCRIPT * TAILWINDCSS * </span>
+        <span>* HTML * CSS * JAVASCRIPT * TAILWINDCSS * </span>
+        <span>* HTML * CSS * JAVASCRIPT * TAILWINDCSS * </span>
+      </div>
+    </div>
+
+    <section id="work" class="max-w-7xl mx-auto px-6 py-24">
+      <h2
+        class="text-5xl font-bold uppercase mb-12 border-b-4 border-black pb-4 inline-block"
+      >
+        Selected Works
+      </h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="flex flex-col">
+          <div
+            class="border-4 border-black bg-white brutalist-shadow p-6 flex flex-col h-full brutalist-hover transition-all duration-200"
+          >
+            <div class="h-48 border-4 border-black mb-6 w-full overflow-hidden">
+              <img
+                src="landing-page.png"
+                alt="Landing Page Kedai Tangkil"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <h3 class="text-2xl font-bold mb-2">Landing Page</h3>
+            <p class="font-semibold mb-6 flex-grow">
+              A landing page for a local coffe shop using HTML CSS JAVASCRIPT.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="border-2 border-black bg-neonYellow px-3 py-1 text-sm font-bold"
+                >HTML</span
+              >
+              <span
+                class="border-2 border-black bg-neonBlue px-3 py-1 text-sm font-bold"
+                >TAILWIND CSS</span
+              >
+              <span
+                class="border-2 border-black bg-neonGreen px-3 py-1 text-sm font-bold"
+                >JAVASCRIPT</span
+              >
+            </div>
+          </div>
+          <div class="mt-4 text-center">
+            <a
+              href="https://mahendraadikresna.github.io/landing_page/"
+              target="_blank"
+              class="inline-block bg-neonYellow border-4 border-black px-6 py-2 font-bold uppercase brutalist-shadow brutalist-hover transition-all duration-200"
+              >View Project</a
+            >
+          </div>
+        </div>
+
+        <div class="flex flex-col">
+          <div
+            class="border-4 border-black bg-white brutalist-shadow p-6 flex flex-col h-full brutalist-hover transition-all duration-200"
+          >
+            <div class="h-48 border-4 border-black mb-6 w-full overflow-hidden">
+              <img
+                src="portfolio.png"
+                alt="Personal Portfolio Website"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <h3 class="text-2xl font-bold mb-2">Portfolio Website</h3>
+            <p class="font-semibold mb-6 flex-grow">
+              A creative portfolio for showcasing design projects using HTML
+              TAILWIND CSS JAVASCRIPT.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="border-2 border-black bg-neonPink px-3 py-1 text-sm font-bold"
+                >HTML</span
+              >
+              <span
+                class="border-2 border-black bg-neonBlue px-3 py-1 text-sm font-bold"
+                >TAILWIND CSS</span
+              >
+              <span
+                class="border-2 border-black bg-neonYellow px-3 py-1 text-sm font-bold"
+                >JAVASCRIPT</span
+              >
+            </div>
+          </div>
+          <div class="mt-4 text-center">
+            <a
+              href="https://mahendraadikresna.github.io/portfolio/"
+              class="inline-block bg-neonYellow border-4 border-black px-6 py-2 font-bold uppercase brutalist-shadow brutalist-hover transition-all duration-200"
+              >View Project</a
+            >
+          </div>
+        </div>
+
+        <div class="flex flex-col">
+          <div
+            class="border-4 border-black bg-white brutalist-shadow p-6 flex flex-col h-full brutalist-hover transition-all duration-200"
+          >
+            <div
+              class="h-48 border-4 border-black mb-6 w-full overflow-hidden"
+            ></div>
+            <h3 class="text-2xl font-bold mb-2">Coming Soon...</h3>
+            <p class="font-semibold mb-6 flex-grow">...</p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="border-2 border-black bg-neonYellow px-3 py-1 text-sm font-bold"
+                >...</span
+              >
+              <span
+                class="border-2 border-black bg-neonGreen px-3 py-1 text-sm font-bold"
+                >...</span
+              >
+            </div>
+          </div>
+          <div class="mt-4 text-center">
+            <a
+              href="#"
+              class="inline-block bg-neonYellow border-4 border-black px-6 py-2 font-bold uppercase brutalist-shadow brutalist-hover transition-all duration-200"
+              >View Project</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="border-t-4 border-black bg-neonBlue">
+      <div class="max-w-4xl mx-auto px-6 py-24 text-center">
+        <h2 class="text-5xl md:text-7xl font-bold uppercase mb-8">
+          Let's Talk!
+        </h2>
+
+        <form
+          id="contact-form"
+          class="flex flex-col gap-6 text-left max-w-2xl mx-auto"
+        >
+          <div>
+            <label class="font-bold text-xl uppercase block mb-2"
+              >Your Name</label
+            >
+            <input
+              type="text"
+              required
+              class="w-full border-4 border-black p-4 text-lg font-bold brutalist-shadow focus:outline-none focus:bg-neonYellow transition-colors placeholder-gray-500"
+              placeholder="John Doe"
+            />
+          </div>
+          <div>
+            <label class="font-bold text-xl uppercase block mb-2"
+              >Your Email</label
+            >
+            <input
+              type="email"
+              required
+              class="w-full border-4 border-black p-4 text-lg font-bold brutalist-shadow focus:outline-none focus:bg-neonYellow transition-colors placeholder-gray-500"
+              placeholder="john@example.com"
+            />
+          </div>
+          <div>
+            <label class="font-bold text-xl uppercase block mb-2"
+              >Message</label
+            >
+            <textarea
+              rows="4"
+              required
+              class="w-full border-4 border-black p-4 text-lg font-bold brutalist-shadow focus:outline-none focus:bg-neonYellow transition-colors placeholder-gray-500"
+              placeholder="Tell me about your project..."
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-neonPink border-4 border-black py-4 mt-4 text-2xl font-bold uppercase brutalist-shadow brutalist-hover transition-all duration-200"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="border-t-4 border-black bg-white py-8 text-center font-bold">
+      <div
+        class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4"
+      >
+        <p>© 2026 Mahendra. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a
+            href="#"
+            class="hover:text-neonPink hover:underline decoration-4 underline-offset-4"
+            >GitHub</a
+          >
+          <a
+            href="#"
+            class="hover:text-neonBlue hover:underline decoration-4 underline-offset-4"
+            >LinkedIn</a
+          >
+          <a
+            href="#"
+            class="hover:text-neonGreen hover:underline decoration-4 underline-offset-4"
+            >Twitter</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // JS 1: Toggle Menu untuk Mobile
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        mobileMenu.classList.toggle("flex");
+      });
+
+      // JS 2: Menangani Submit Form (Agar tidak refresh halaman & kasih efek lucu)
+      const contactForm = document.getElementById("contact-form");
+
+      contactForm.addEventListener("submit", (e) => {
+        e.preventDefault(); // Mencegah form reload page
+
+        const btn = contactForm.querySelector('button[type="submit"]');
+        const originalText = btn.innerText;
+
+        // Ubah text tombol sementara
+        btn.innerText = "MESSAGE SENT! 🔥";
+        btn.classList.replace("bg-neonPink", "bg-neonGreen");
+
+        // Reset form
+        contactForm.reset();
+
+        // Kembalikan tombol ke semula setelah 3 detik
+        setTimeout(() => {
+          btn.innerText = originalText;
+          btn.classList.replace("bg-neonGreen", "bg-neonPink");
+        }, 3000);
+      });
+    </script>
+  </body>
+</html>
