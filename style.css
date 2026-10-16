@@ -4,14 +4,14 @@
    Hanya HTML, CSS, dan JavaScript. Tanpa framework.
 
    Daftar isi:
-     1. Token & dasar            6. Tentang, riwayat & timeline
-     2. Tipografi & utilitas     7. Keahlian
-     3. Menu mobile & navbar     8. Proyek (daftar) & testimoni
-     4. Header & hero            9. Kontak, form, footer
-     5. Intro (perkenalan)      10. Responsif & aksesibilitas
+     1. Token & dasar            6. Keahlian
+     2. Tipografi & utilitas     7. Proyek
+     3. Menu mobile & navbar     8. Kontak, form & footer
+     4. Header & hero            9. Responsif & preferensi pengguna
+     5. Perkenalan
    ===================================================================== */
 
-/* ========================= 1. TOKEN & DASAR ========================= */
+/* ========================== 1. TOKEN & DASAR ========================== */
 :root {
   /* Warna — ubah di sini dan seluruh halaman ikut berubah */
   --c-bg-outer: #b4b3a8; /* latar belakang halaman */
@@ -153,7 +153,7 @@ section[id] {
   margin-top: clamp(3.5rem, 9vw, 9rem);
 }
 
-/* ==================== 2. TIPOGRAFI & UTILITAS ==================== */
+/* ======================= 2. TIPOGRAFI & UTILITAS ====================== */
 .mono {
   font-family: var(--f-mono);
   font-size: clamp(0.62rem, 0.3vw + 0.58rem, 0.72rem);
@@ -187,10 +187,6 @@ em {
   opacity: 0.28;
 }
 
-.tline__rule--short {
-  max-width: 4em;
-}
-
 /* Animasi halus: setiap komponen naik sedikit saat masuk layar.
    Memakai "animation" (bukan "transition") supaya tidak menimpa transisi
    hover milik baris proyek, tautan, dan tombol. Jeda bertingkat diambil
@@ -215,7 +211,7 @@ em {
   }
 }
 
-/* ========================= 3. MENU MOBILE ========================== */
+/* =========================== 3. MENU MOBILE =========================== */
 /* Hanya menutupi sepertiga layar bagian atas, jadi sisa halaman tetap terlihat. */
 .menu {
   position: fixed;
@@ -286,25 +282,7 @@ em {
   color: var(--c-red);
 }
 
-/* tautan aksi di dalam menu mobile */
-.menu__cv {
-  align-self: flex-start;
-  margin-top: clamp(1.75rem, 5vw, 2.5rem);
-  padding: 0.7rem 1.5rem;
-  border: 1px solid var(--c-ink);
-  border-radius: 999px;
-  font-family: var(--f-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  transition: background-color 0.35s var(--ease), color 0.35s var(--ease);
-}
-
-.menu__cv:hover {
-  background: var(--c-ink);
-  color: var(--c-cream);
-}
-
+/* tautan email di dalam menu mobile */
 .menu__mail {
   margin: 0.5rem 0 0;
   font-family: var(--f-mono);
@@ -326,7 +304,7 @@ em {
   color: var(--c-ink-soft);
 }
 
-/* ================ 3b. NAVBAR YANG MENGIKUTI SCROLL ================= */
+/* ================== 3b. NAVBAR YANG MENGIKUTI SCROLL ================== */
 /* Pil melayang di tengah atas. Tersembunyi sampai header asli tergulir
    ke atas (kelas .is-shown ditambahkan oleh script.js). Memakai
    position: fixed supaya tetap di tempat meski panel memakai
@@ -403,23 +381,13 @@ em {
   color: var(--c-cream);
 }
 
-/* ========================= 4. HEADER & HERO ======================== */
+/* ========================== 4. HEADER & HERO ========================== */
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
   padding-bottom: clamp(1.5rem, 4vw, 3rem);
-}
-
-.header__brand {
-  font-family: var(--f-serif);
-  font-size: 1.3rem;
-  white-space: nowrap;
-}
-
-.header__brand .dot {
-  color: var(--c-red);
 }
 
 .header__nav {
@@ -466,25 +434,7 @@ em {
   color: var(--c-red);
 }
 
-/* tombol unduh CV di header (tampil mulai layar lebar) */
-.header__cv {
-  display: none;
-  padding: 0.5rem 1.1rem;
-  border: 1px solid var(--c-ink);
-  border-radius: 999px;
-  font-family: var(--f-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  transition: background-color 0.35s var(--ease), color 0.35s var(--ease);
-}
-
-.header__cv:hover {
-  background: var(--c-ink);
-  color: var(--c-cream);
-}
-
+/* tombol burger — satu-satunya navigasi di layar kecil */
 .header__burger {
   display: flex;
   flex-direction: column;
@@ -517,31 +467,7 @@ em {
   display: inline-block;
 }
 
-.hero__meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 2rem;
-  align-items: baseline;
-  justify-content: space-between;
-  margin-top: clamp(1.5rem, 3vw, 2.5rem);
-  color: var(--c-ink-soft);
-}
-
-.hero__meta p {
-  margin: 0;
-}
-
-.hero__clock {
-  display: flex;
-  gap: 0.6rem;
-  align-items: baseline;
-}
-
-.hero__time {
-  color: var(--c-ink);
-}
-
-/* ======================== 5. INTRO (PERKENALAN) ==================== */
+/* ============================ 5. PERKENALAN =========================== */
 .intro {
   padding-top: clamp(2rem, 6vw, 5rem);
   border-top: 1px solid var(--rule);
@@ -570,7 +496,7 @@ em {
   gap: clamp(1.75rem, 4vw, 3rem);
 }
 
-/* =================== 6. TENTANG & TIMELINE =================== */
+/* Teks perkenalan: pernyataan besar + paragraf pengantar */
 .statement {
   margin: 0;
   font-family: var(--f-serif);
@@ -579,110 +505,13 @@ em {
   letter-spacing: -0.015em;
 }
 
-/* hanya paragraf pembuka, bukan semua <p> di dalamnya */
+/* Batasi panjang baris paragraf supaya tetap enak dibaca */
 .about__body > p {
   margin: 0 0 1.1rem;
   max-width: 48ch;
 }
 
-.timeline {
-  margin-top: clamp(2rem, 5vw, 3.5rem);
-}
-
-.timeline__head {
-  margin: 0 0 0.5rem;
-  color: var(--c-ink-soft);
-}
-
-.timeline__row {
-  display: grid;
-  grid-template-columns: 1fr auto auto;
-  align-items: baseline;
-  gap: 1rem;
-  padding: 0.85rem 0;
-  border-top: 1px solid var(--rule);
-  transition: background-color 0.3s var(--ease);
-}
-
-.timeline__row:last-child {
-  border-bottom: 1px solid var(--rule);
-}
-
-.timeline__row:hover {
-  background-color: rgba(63, 59, 55, 0.05);
-}
-
-.timeline__title {
-  font-size: 0.98rem;
-}
-
-.timeline__row .mono {
-  color: var(--c-ink-soft);
-}
-
-/* Blok riwayat: pendidikan, penghargaan, sertifikat */
-.record {
-  margin-top: clamp(2rem, 5vw, 3.5rem);
-}
-
-.record__head {
-  margin: 0 0 0.5rem;
-  color: var(--c-ink-soft);
-}
-
-.record__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.record__item {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: baseline;
-  gap: 0.25rem 1.5rem;
-  padding: 0.85rem 0;
-  border-top: 1px solid var(--rule);
-  transition: background-color 0.3s var(--ease);
-}
-
-.record__item:last-child {
-  border-bottom: 1px solid var(--rule);
-}
-
-.record__item:hover {
-  background-color: rgba(63, 59, 55, 0.05);
-}
-
-.record__title {
-  font-size: 0.98rem;
-}
-
-.record__year {
-  color: var(--c-ink-soft);
-  white-space: nowrap;
-}
-
-/* Sentuhan pribadi: hobi / hal menarik tentang kamu */
-.fun {
-  margin-top: clamp(2rem, 5vw, 3.5rem);
-  padding: clamp(1.1rem, 2.4vw, 1.6rem);
-  border: 1px solid var(--rule);
-  border-radius: clamp(12px, 1.6vw, 18px);
-}
-
-.fun__head {
-  margin: 0 0 0.4rem;
-  color: var(--c-ink-soft);
-}
-
-.fun__text {
-  margin: 0;
-  max-width: 46ch;
-  font-size: 0.95rem;
-}
-
-/* ========================= 7. KEAHLIAN ============================ */
+/* ============================= 6. KEAHLIAN ============================ */
 .section__title {
   margin: 0;
   font-family: var(--f-serif);
@@ -733,7 +562,7 @@ em {
   color: var(--c-ink-soft);
 }
 
-/* ====================== 8. PROYEK (DAFTAR) ======================== */
+/* ============================== 7. PROYEK ============================= */
 .works__title {
   font-family: var(--f-serif);
   font-weight: 400;
@@ -945,59 +774,7 @@ em {
   color: var(--c-ink-soft);
 }
 
-/* ====================== 8b. TESTIMONI ============================= */
-.quotes__list {
-  display: grid;
-  gap: clamp(1rem, 2.4vw, 1.75rem);
-}
-
-.quote {
-  margin: 0;
-  padding: clamp(1.25rem, 3vw, 2rem);
-  border-radius: clamp(14px, 1.8vw, 24px);
-  background: var(--c-cream);
-  transition: transform 0.45s var(--ease);
-}
-
-.quote:hover {
-  transform: translateY(-4px);
-}
-
-.quote blockquote {
-  margin: 0;
-  font-family: var(--f-serif);
-  font-size: clamp(1.15rem, 2.2vw, 1.55rem);
-  line-height: 1.3;
-  letter-spacing: -0.01em;
-}
-
-.quote blockquote::before {
-  content: "\201C";
-}
-
-.quote blockquote::after {
-  content: "\201D";
-}
-
-.quote figcaption {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.3rem 0.75rem;
-  margin-top: 1rem;
-  padding-top: 0.9rem;
-  border-top: 1px solid var(--rule);
-}
-
-.quote__name {
-  font-size: 0.95rem;
-}
-
-.quote__role {
-  color: var(--c-ink-soft);
-}
-
-/* ================= 9. KONTAK, FORM & FOOTER ======================= */
+/* ====================== 8. KONTAK, FORM & FOOTER ====================== */
 .contact__text {
   margin: 0;
   max-width: 46ch;
@@ -1186,7 +963,7 @@ em {
   color: rgba(var(--cream-rgb), 0.5);
 }
 
-/* ============ 10. RESPONSIF & PREFERENSI PENGGUNA ============ */
+/* ================= 9. RESPONSIF & PREFERENSI PENGGUNA ================= */
 @media (min-width: 700px) {
   /* Label Peran/Tantangan/Hasil berdiri di kolom sendiri supaya tidak tinggi */
   .project__fact {
@@ -1215,9 +992,6 @@ em {
   .header__nav {
     display: flex;
   }
-  .header__cv {
-    display: inline-block;
-  }
   .header__burger {
     display: none;
   }
@@ -1240,13 +1014,6 @@ em {
   .skills__list {
     grid-column: 6 / span 7;
   }
-  .quotes .section__title,
-  .quotes__list {
-    grid-column: 1 / -1;
-  }
-  .quotes__list {
-    grid-template-columns: repeat(2, 1fr);
-  }
   .contact .grid {
     align-items: start;
   }
@@ -1261,10 +1028,6 @@ em {
 @media (min-width: 1100px) {
   .header__mail {
     display: block;
-  }
-  .hero__meta-mid {
-    flex: 1;
-    text-align: center;
   }
 }
 

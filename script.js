@@ -1,9 +1,9 @@
 /* =====================================================================
    PORTFOLIO — JavaScript vanilla (tanpa library apa pun)
-   Hanya 6 bagian kecil:
-     1. Animasi muncul saat scroll    4. Validasi form kontak
-     2. Jam lokal (WITA)              5. Tahun otomatis di footer
-     3. Menu mobile                   6. Navbar mengikuti scroll
+   Hanya 5 bagian kecil:
+     1. Animasi muncul saat scroll    4. Tahun otomatis di footer
+     2. Menu mobile                   5. Navbar mengikuti scroll
+     3. Validasi form kontak
    ===================================================================== */
 
 (function () {
@@ -62,30 +62,7 @@
   }
 
   /* ==================================================================
-     2. JAM LOKAL (zona waktu WITA — Tabanan, Bali)
-     ================================================================== */
-  function initClock() {
-    const clock = $("#clock");
-    if (!clock) return;
-
-    const formatter = new Intl.DateTimeFormat("id-ID", {
-      timeZone: "Asia/Makassar",
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "2-digit",
-      hour12: false,
-    });
-
-    const tick = () => {
-      clock.textContent = formatter.format(new Date());
-    };
-
-    tick();
-    window.setInterval(tick, 1000);
-  }
-
-  /* ==================================================================
-     3. MENU MOBILE
+     2. MENU MOBILE
      Tombol burger membuka panel menu di sepertiga atas layar.
      ================================================================== */
   function initMenu() {
@@ -141,7 +118,7 @@
   }
 
   /* ==================================================================
-     4. VALIDASI FORM KONTAK
+     3. VALIDASI FORM KONTAK
      Karena web ini tanpa server, pesan dikirim lewat aplikasi email
      pengguna (mailto). Catatan mengganti ke Formspree ada di README.md.
      ================================================================== */
@@ -151,11 +128,9 @@
 
     const status = $("#formStatus");
 
-    // Alamat tujuan diambil dari tautan email di header
-    const emailTarget = ($(".header__mail")?.getAttribute("href") || "mailto:mahendrabatannyuh@gmail.com").replace(
-      "mailto:",
-      ""
-    );
+    // Alamat tujuan diambil dari tautan mailto pertama di halaman, supaya
+    // alamat emailnya cukup ditulis sekali saja di index.html.
+    const emailTarget = ($('a[href^="mailto:"]')?.getAttribute("href") || "").replace("mailto:", "");
 
     // Aturan sederhana: satu fungsi per kolom, hasilnya pesan error
     // (string kosong berarti isian sudah benar)
@@ -191,6 +166,11 @@
     form.addEventListener("submit", (event) => {
       event.preventDefault();
 
+      if (!emailTarget) {
+        status.textContent = "Alamat email tujuan belum ada di index.html.";
+        return;
+      }
+
       const inputs = $$("input, textarea", form);
       const semuaBenar = inputs.map(validateField).every(Boolean);
 
@@ -213,7 +193,7 @@
   }
 
   /* ==================================================================
-     5. TAHUN OTOMATIS DI FOOTER
+     4. TAHUN OTOMATIS DI FOOTER
      ================================================================== */
   function initYear() {
     const year = $("#year");
@@ -221,7 +201,7 @@
   }
 
   /* ==================================================================
-     6. NAVBAR MENGIKUTI SCROLL
+     5. NAVBAR MENGIKUTI SCROLL
      Pil navigasi di atas muncul setelah header asli tergulir ke atas,
      dan pil gelap di dalamnya meluncur mulus ke bagian yang dilihat.
      ================================================================== */
@@ -311,7 +291,6 @@
      JALANKAN SEMUA
      ================================================================== */
   initReveal();
-  initClock();
   initMenu();
   initForm();
   initYear();

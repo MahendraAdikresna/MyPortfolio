@@ -15,7 +15,7 @@ Isi halaman mengikuti saran artikel Codecademy
 Portfolio/
 ├── index.html    → seluruh isi & struktur halaman
 ├── style.css     → semua tampilan (bagian bernomor, token warna di :root)
-├── script.js     → 6 fungsi kecil, semuanya berkomentar bahasa Indonesia
+├── script.js     → 5 fungsi kecil, semuanya berkomentar bahasa Indonesia
 ├── cv.pdf        → CV contoh (placeholder, buat sendiri lalu timpa file ini)
 ├── favicon.svg   → ikon tab browser
 └── README.md     → panduan ini
@@ -45,7 +45,7 @@ Lalu buka `http://localhost:5500`.
 | Bio: latar belakang, pendidikan, penghargaan | bagian `#tentang` di panel krem (pernyataan singkat + paragraf pengenalan) |
 | Sentuhan pribadi: hobi / hal menarik | belum ada — tambahkan sendiri bila perlu (lihat bagian 3 di bawah) |
 | Kontak: nama & email mudah ditemukan | header (layar lebar), menu mobile, dan bagian `#kontak` |
-| CV / resume bisa diunduh | tombol **CV (PDF)** di `#kontak` → file `cv.pdf` |
+| CV / resume bisa diunduh | belum ada tombolnya — file `cv.pdf` sudah disiapkan, lihat **bagian 2** untuk memasang tautannya |
 | Proyek: peran, tantangan, hasil | tiap baris proyek di `#proyek` punya blok **Peran / Tantangan / Hasil** yang muncul saat dibuka |
 | Keahlian teknis **dan** soft skill | `#keahlian` dibagi menjadi **Keahlian teknis** dan **Soft skill** |
 | Rekomendasi / testimoni | belum ada — boleh ditambahkan kalau sudah punya |
@@ -63,19 +63,28 @@ Cari dengan Ctrl+F kata `GANTI`.
 | Yang diubah | Lokasi di `index.html` |
 | --- | --- |
 | Nama depan & belakang | bagian `<h1 class="hero__title">` |
-| Email | `.header__mail`, `.menu__mail`, dan `.clink` pertama |
+| Email | `.menu__mail`, `.header__mail`, dan `.clink` pertama |
 | Judul & deskripsi tab | dalam `<head>` |
-| Tautan GitHub / LinkedIn | `.clink` kedua dan ketiga |
-| Brand di header | `.header__brand` (hurufnya saja) |
+| Tautan GitHub / LinkedIn | `.clink` kedua (GitHub) |
+
+Nama lengkap sengaja **tidak** diulang di navbar — di header hanya ada menu, email, dan tombol
+burger. Nama besar sekali saja di hero, jadi tidak terkesan dobel.
 
 **Huruf miring pada nama:** huruf yang dibungkus `<i>` tampil miring.
 Contoh `Mahendr<i>a</i>` menghasilkan *Mahendra* dengan huruf `a` miring.
 
 ### 2. CV
 
-Tombol unduh mengarah ke `cv.pdf` di folder yang sama. Timpa file contoh itu dengan CV aslimu
-(nama file harus tetap `cv.pdf`). Kalau nama filenya berbeda, ubah juga `href="cv.pdf"` pada
-tombol `.contact__cv` di bagian `#kontak`.
+File `cv.pdf` sudah ada di folder ini, tapi masih contoh. Halaman ini **belum menampilkan tombol
+unduh** — di `#kontak` hanya ada tombol GitHub. Kalau ingin CV bisa diunduh pengunjung, tambahkan
+satu tombol di dalam `<div class="contact__cv">`, di bawah tombol GitHub:
+
+```html
+<a class="btn" href="cv.pdf" download>Unduh CV (PDF)</a>
+```
+
+Lalu timpa `cv.pdf` dengan CV aslimu (nama file harus tetap `cv.pdf`). Kalau namanya berbeda,
+samakan juga `href` pada tombol di atas.
 
 ### 3. Pengenalan diri (Tentang saya)
 
@@ -155,9 +164,10 @@ Setiap baris adalah satu `<div class="skill">`.
 
 ### 6. Testimoni (opsional)
 
-Versi ini belum punya bagian testimoni. Kalau nanti sudah ada orang yang bisa memberi
-rekomendasi, tambahkan satu bagian baru di panel abu (setelah `#proyek`) dan ikuti gaya
-`<section class="section">` yang sudah ada.
+Versi ini belum punya bagian testimoni, dan gaya untuk itu juga belum ada di `style.css`.
+Kalau nanti sudah ada orang yang bisa memberi rekomendasi, tambahkan satu bagian baru di panel abu
+(setelah `#proyek`) dengan pola `<section class="section">` yang sudah ada, lalu tulis gayanya
+sendiri mengikuti token warna di `:root`.
 
 ### 7. Warna & tipografi
 
@@ -240,8 +250,7 @@ Kalau mau diubah, tiga tempat yang perlu disentuh:
 3. Navbar pil yang mengikuti scroll + penanda bagian yang meluncur mulus
 4. Daftar proyek yang bisa dibuka-tutup per baris (`<details>`, tanpa JavaScript)
 5. Validasi form kontak tanpa library
-6. Jam lokal WITA (Tabanan) yang berjalan tiap detik
-7. Tahun di footer yang menyesuaikan sendiri
+6. Tahun di footer yang menyesuaikan sendiri
 
 ## Cara publikasi gratis (GitHub Pages)
 
