@@ -120,7 +120,9 @@
   /* ==================================================================
      3. VALIDASI FORM KONTAK
      Karena web ini tanpa server, pesan dikirim lewat aplikasi email
-     pengguna (mailto). Catatan mengganti ke Formspree ada di README.md.
+     pengguna (mailto). Kalau ingin pesan masuk sendiri, buat form di
+     formspree.io, lalu beri <form> atribut action + method="POST" dan
+     hapus event.preventDefault() di dalam submit di bawah ini.
      ================================================================== */
   function initForm() {
     const form = $("#contactForm");
