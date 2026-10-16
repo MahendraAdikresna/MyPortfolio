@@ -1,0 +1,11 @@
+# File PDF berisi tabel xref dengan offset byte yang harus persis.
+# Kalau akhir barisnya diubah Git (LF <-> CRLF), file jadi rusak.
+*.pdf binary
+
+# File gambar juga biner — jangan pernah diubah akhir barisnya.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary

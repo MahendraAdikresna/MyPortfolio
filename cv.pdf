@@ -1,0 +1,112 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 2042 >>
+stream
+BT
+F1 22 Tf
+1 0 0 1 64 768 Tm
+(Rizky Pratama) Tj
+F2 11.5 Tf
+1 0 0 1 64 746 Tm
+(Junior Frontend Developer - Jakarta) Tj
+F2 9 Tf
+1 0 0 1 64 728 Tm
+(halo@contoh.com  |  github.com/namapengguna  |  linkedin.com/in/namapengguna) Tj
+0.75 w 0.75 0.72 0.66 RG
+64 714 m 531 714 l S
+F1 11 Tf
+1 0 0 1 64 692 Tm
+(RINGKASAN) Tj
+F2 10 Tf
+1 0 0 1 64 676 Tm
+(Junior frontend developer yang fokus pada HTML, CSS, dan JavaScript.) Tj
+F2 10 Tf
+1 0 0 1 64 662 Tm
+(Terbiasa mengubah desain menjadi halaman rapi, responsif, dan mudah dipakai.) Tj
+F1 11 Tf
+1 0 0 1 64 632 Tm
+(KEAHLIAN TEKNIS) Tj
+F2 10 Tf
+1 0 0 1 64 616 Tm
+(HTML5, CSS3, JavaScript, Responsive Design, Git & GitHub, Figma) Tj
+F1 11 Tf
+1 0 0 1 64 588 Tm
+(SOFT SKILL) Tj
+F2 10 Tf
+1 0 0 1 64 572 Tm
+(Komunikasi, Kerja sama tim, Manajemen waktu, Kemauan belajar) Tj
+F1 11 Tf
+1 0 0 1 64 544 Tm
+(PENDIDIKAN) Tj
+F2 10 Tf
+1 0 0 1 64 528 Tm
+(- SMK Negeri 1 Jakarta - Rekayasa Perangkat Lunak, 2021-2024) Tj
+F2 10 Tf
+1 0 0 1 64 514 Tm
+(- Kelas front-end online Codecademy & freeCodeCamp, 2024) Tj
+F1 11 Tf
+1 0 0 1 64 486 Tm
+(PENGHARGAAN & SERTIFIKAT) Tj
+F2 10 Tf
+1 0 0 1 64 470 Tm
+(- Sertifikat Responsive Web Design - freeCodeCamp, 2024) Tj
+F2 10 Tf
+1 0 0 1 64 456 Tm
+(- Juara 3 lomba desain web antar sekolah, 2023) Tj
+F1 11 Tf
+1 0 0 1 64 428 Tm
+(PROYEK) Tj
+F2 10 Tf
+1 0 0 1 64 412 Tm
+(- Landing Page Kafe, 2025: halaman promosi dengan menu, galeri, formulir.) Tj
+F2 10 Tf
+1 0 0 1 64 398 Tm
+(  Tantangan: galeri berantakan di ponsel, diselesaikan dengan CSS Grid.) Tj
+F2 10 Tf
+1 0 0 1 64 380 Tm
+(- Website Portofolio, 2025: dibuat dari nol tanpa framework apa pun.) Tj
+F2 10 Tf
+1 0 0 1 64 366 Tm
+(  Peran: HTML, CSS, dan JavaScript untuk menu mobile serta validasi form.) Tj
+F2 10 Tf
+1 0 0 1 64 348 Tm
+(- Aplikasi Daftar Tugas, 2024: data disimpan memakai localStorage.) Tj
+F2 10 Tf
+1 0 0 1 64 334 Tm
+(- Galeri Foto Responsif, 2024: latihan CSS Grid dan aspect-ratio.) Tj
+0.45 0.45 0.45 rg
+F2 8.5 Tf
+1 0 0 1 64 100 Tm
+(Catatan: ini file CV contoh. Ganti isinya dengan CV aslimu, tetap bernama cv.pdf.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000002345 00000 n 
+0000002447 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+2544
+%%EOF
